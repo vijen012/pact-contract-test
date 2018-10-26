@@ -1,0 +1,25 @@
+/*/logs
+
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.metadata
+.recommenders
+Servers/
+RemoteSystemsTempFiles/
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.mvn/
+mvnw
+mvnw.cmd
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
