@@ -1,0 +1,2 @@
+INSERT INTO USER (ID, TITLE, NAME) VALUES(100, 'Miss', 'Cass Martin');
+INSERT INTO USER (ID, TITLE, NAME) VALUES(101, 'Mr', 'Bill Garry');

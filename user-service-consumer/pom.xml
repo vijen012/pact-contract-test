@@ -10,7 +10,7 @@
 	<packaging>jar</packaging>
 
 	<name>user-service-consumer</name>
-	<description>Bookstore as Pact provider</description>
+	<description>user-service consumer</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

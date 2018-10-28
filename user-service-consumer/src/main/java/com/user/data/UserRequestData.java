@@ -3,18 +3,11 @@ package com.user.data;
 import org.springframework.stereotype.Component;
 
 @Component
-public class UserResponseData {
+public class UserRequestData {
 	
-	private Long id;
 	private String title;
 	private String name;
 	
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
 	public String getTitle() {
 		return title;
 	}
@@ -30,7 +23,7 @@ public class UserResponseData {
 	
 	@Override
 	public String toString() {
-		return "UserResponseData [id=" + id + ", title=" + title + ", name=" + name + "]";
+		return "UserResponseData [title=" + title + ", name=" + name + "]";
 	}
-	
+
 }
