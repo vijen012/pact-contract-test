@@ -27,7 +27,7 @@ import com.user.service.UserService;
 import au.com.dius.pact.provider.junit.Provider;
 import au.com.dius.pact.provider.junit.State;
 import au.com.dius.pact.provider.junit.VerificationReports;
-import au.com.dius.pact.provider.junit.loader.PactFolder;
+import au.com.dius.pact.provider.junit.loader.PactBroker;
 import au.com.dius.pact.provider.junit.target.Target;
 import au.com.dius.pact.provider.junit.target.TestTarget;
 import au.com.dius.pact.provider.spring.SpringRestPactRunner;
@@ -37,7 +37,8 @@ import net.jadler.stubbing.server.jdk.JdkStubHttpServer;
 @RunWith(SpringRestPactRunner.class)
 @SpringBootTest(classes = UserServiceProvicerApplication.class, webEnvironment = WebEnvironment.RANDOM_PORT)
 @Provider("user-service-provider")
-@PactFolder("../user-service-consumer/target/pacts")
+//@PactFolder("../user-service-consumer/target/pacts")
+@PactBroker(host = "shared-jenk-14.sandbox.local", port = "30080", protocol = "http") 
 @VerificationReports({"console", "markdown"})
 public class UserControllerProviderContractTest {
 		
@@ -92,6 +93,8 @@ public class UserControllerProviderContractTest {
 		accountData.setAccountType("Current");
 		accountData.setAccountNumber("123456789");
 		when(userService.getUserAccounts()).thenReturn(accountData);
+		
+		
 //		final String responseData = objectMapper.writeValueAsString(accountData);
 //		onRequest()
 //			.havingMethodEqualTo("GET")			
